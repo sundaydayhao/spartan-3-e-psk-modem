@@ -1,0 +1,3 @@
+verilog work "../rtl/led_demo.v"
+verilog work "../rtl/lcd_text.v"
+verilog work "../sim/tb_led_demo.v"

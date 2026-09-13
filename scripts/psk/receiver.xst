@@ -1,0 +1,10 @@
+run
+-ifn ../../scripts/psk/receiver.prj
+-ifmt mixed
+-ofn psk_rx_top
+-ofmt NGC
+-p xc3s500e-4-fg320
+-top psk_rx_top
+-opt_mode Speed
+-opt_level 1
+-vlgincdir {../../rtl/psk}

@@ -1,0 +1,6 @@
+verilog work "../../rtl/psk/psk_decode.v"
+verilog work "../../rtl/psk/psk_fec_beam.v"
+verilog work "../../rtl/psk/psk_viterbi.v"
+verilog work "../../rtl/psk/psk_varicode.v"
+verilog work "../../rtl/psk/mfsk_bit_decoder.v"
+verilog work "../../sim/psk/tb_fec.v"

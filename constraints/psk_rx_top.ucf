@@ -1,0 +1,39 @@
+# UG230 v1.2, Figures 2-11 and 3-2/3-3. JP9 must select 3.3 V.
+NET "clk_50mhz" LOC = "C9" | IOSTANDARD = LVCMOS33;
+NET "clk_50mhz" TNM_NET = "clk_50mhz_group";
+TIMESPEC "TS_clk_50mhz" = PERIOD "clk_50mhz_group" 20 ns HIGH 40%;
+
+NET "led<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<6>" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+NET "led<7>" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;
+
+# UG230 figures 5-2 and 11-4: LCD DB[7:4] share SF_D[11:8].
+NET "lcd_data<0>" LOC = "R15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<1>" LOC = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<2>" LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_data<3>" LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_e" LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_rs" LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "lcd_rw" LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "sf_ce0" LOC = "D16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "sf_oe" LOC = "C18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "sf_we" LOC = "D17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+# UG230 figure 2-9: rotary shaft A/B and active-high center press.
+NET "rot_a" LOC = "K18" | IOSTANDARD = LVTTL | PULLUP;
+NET "rot_b" LOC = "G18" | IOSTANDARD = LVTTL | PULLUP;
+NET "rot_center" LOC = "V16" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "spi_sck" LOC = "U16" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "spi_mosi" LOC = "T4" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "spi_miso" LOC = "N10" | IOSTANDARD = LVCMOS33;
+NET "amp_cs" LOC = "N7" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "amp_shdn" LOC = "P7" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "ad_conv" LOC = "P11" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "spi_ss_b" LOC = "U3" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "dac_cs" LOC = "N8" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "dac_clr" LOC = "P8" | IOSTANDARD = LVCMOS33 | DRIVE = 6 | SLEW = SLOW;
+NET "fpga_init_b" LOC = "T3" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;

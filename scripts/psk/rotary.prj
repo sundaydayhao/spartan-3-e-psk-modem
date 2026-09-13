@@ -1,0 +1,2 @@
+verilog work "../../rtl/psk/rotary_mode.v"
+verilog work "../../sim/psk/tb_rotary.v"

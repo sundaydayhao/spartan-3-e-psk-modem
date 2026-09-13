@@ -1,0 +1,9 @@
+run
+-ifn ../scripts/led_demo.prj
+-ifmt mixed
+-ofn led_demo
+-ofmt NGC
+-p xc3s500e-4-fg320
+-top led_demo
+-opt_mode Speed
+-opt_level 1
